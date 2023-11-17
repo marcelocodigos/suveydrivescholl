@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap');
+*{
+    font-family: Nunito,sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    margin: 10px auto;
+    height: 100vh;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 50vw;
+}
+h2{
+    padding-top:30px;
+    padding-bottom: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+h3{
+    font-size: 16px;
+    padding-bottom: 70px;
+    color: rgb(87, 87, 87);
+}
+.container{
+    background-color: #E9F3FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0 100px;
+    padding: 20px;
+    border-radius: 60px;
+}
+footer{
+    margin:0 100px;
+    padding:10px 40px;
+    font-size: 12px;
+    text-align: center;
+}
+.container-item{
+  align-items: center;
+}
+.container-item h3{
+  text-align: center;
+}
+button{
+    background-color: #056AD9;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    padding: 13px 60px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 18px;
+}
+button:hover{
+    background-color: #024EA2;
+}
+
+.form1 fieldset{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container-form{
+    background-color: #E9F3FF;
+    border: none;
+    margin:auto 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    box-shadow: 0px 2px 9.4px 0px rgba(0, 0, 0, 0.25);
+
+    
+}
+legend{
+  padding-top: 20px;
+  text-align: center;
+  font-size: 22px;
+}
+fieldset{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+fieldset input,select{
+    padding:10px 40px;
+    font-size: 20px;
+    outline: none;
+    border-radius: 20px;
+    border: 1px solid rgb(175, 175, 175);
+}
+input:focus,select:focus{
+    outline: 2px solid #056AD9;
+}
+
+fieldset label{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size:16px;
+    
+}
+legend,fieldset{
+     border: none !important;
+}
+select {
+    cursor: pointer;
+    /* Aumenta o tamanho da seta do select */
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Webkit browsers (Chrome, Safari) */
+    appearance: none; /* Remove a aparência padrão */
+    
+    /* Adiciona um ícone para representar a seta (pode ser ajustado conforme necessário) */
+    background: url('data:image/svg+xml;utf8,<svg fill="%23333333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z" /></svg>') no-repeat right center;
+    background-size: 30px; /* Ajusta o tamanho da seta */
+    padding-right: 30px; /* Ajusta o espaço para a seta */
+  }
+  .container-questions-buttons{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+   
+  }
+  .container-questions h4{
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+
+  .container-questions{
+    padding:40px 100px;
+    margin:10px 50px;
+    background-color: #E9F3FF;
+    border-radius: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  #perguntaAtual{
+    margin-top: 10px;
+    font-weight: 800;
+    font-size: 20px;
+    color: #056AD9;
+  }
+ 
+  #pergunta-aqui{
+    font-size: 30px;
+    text-align: center;
+  }
+  .btn-questions{
+    background-color: #98B8DC;
+    margin-top:10px;
+    padding:10px 20px;
+   
+    
+  }
+  .option-btn-selected{
+    background-color: #024EA2;
+    outline:6px solid  #65aaf3;
+
+  }
+  #continuarButton,#finalizarButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 100px;
+  }
