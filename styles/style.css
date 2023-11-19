@@ -213,7 +213,8 @@ select {
        }
        #finalizarButton,
        #continuarButton{
-        height: 9vh;
-        font-size: 2.3rem;
+        height: auto;
+        font-weight: 600;
+        font-size: 1.7rem;
        }
   }
