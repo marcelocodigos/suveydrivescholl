@@ -5,12 +5,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+.validation{
+  color:red;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+@media (min-width:1000px){
+     header{
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+     }
+     #pergunta-aqui{
+      width: 70vw;
+     }
+}
+
 main{
-  margin: 10px auto;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 header{
     display: flex;
