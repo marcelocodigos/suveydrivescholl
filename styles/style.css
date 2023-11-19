@@ -197,7 +197,7 @@ select {
         padding: 10px;
       }
       .container-questions{
-        height: 100vh;
+        height: auto;
       }
       header{
         display: none;
