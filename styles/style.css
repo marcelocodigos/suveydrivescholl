@@ -6,8 +6,11 @@
     box-sizing: border-box;
 }
 main{
-    margin: 10px auto;
-    height: 100vh;
+  margin: 10px auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 header{
     display: flex;
@@ -151,9 +154,7 @@ select {
  
   
   }
-  body{
-    overflow: hidden;
-  }
+  
  
   #perguntaAtual{
     margin-top: 10px;
@@ -244,4 +245,18 @@ select {
         padding:10px 10px;
         margin-right: 22px;
        }
+  }
+  @media (max-width:720){
+    .container{
+      align-items: center;
+      justify-content: center;
+    }
+    main{
+      margin: 10px auto;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
   }
