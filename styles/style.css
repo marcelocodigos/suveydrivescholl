@@ -150,6 +150,9 @@ select {
     margin: 30px;
   
   }
+  .btn-questions:hover{
+    outline: 2px solid #252525;
+  }
   #perguntaAtual{
     margin-top: 10px;
     font-weight: 800;
@@ -180,12 +183,8 @@ select {
     padding: 20px 100px;
   }
 
+ 
   @media (max-width:1000px){
-   header{
-    flex-direction: column;
-   }
-  }
-  @media (max-width:800px){
     .container-questions-buttons {
       max-width: 100vw;
       min-width: 80vw;
@@ -202,4 +201,18 @@ select {
       .container-questions{
         height: 100vh;
       }
+      header{
+        display: none;
+       }
+       .btn-questions{
+        width: 100%;
+        padding: 10px 20px;
+        height: 9vh;
+        font-size: 2.3rem;
+       }
+       #finalizarButton,
+       #continuarButton{
+        height: 9vh;
+        font-size: 2.3rem;
+       }
   }
