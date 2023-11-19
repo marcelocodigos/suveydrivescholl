@@ -128,8 +128,8 @@ select {
     flex-direction: column;
     max-width: 50%;
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+   
+   
    
   }
   .container-questions h4{
@@ -148,7 +148,11 @@ select {
     justify-content: center;
     align-items: center;
     margin: 30px;
+ 
   
+  }
+  body{
+    overflow: hidden;
   }
  
   #perguntaAtual{
@@ -161,6 +165,9 @@ select {
   #pergunta-aqui{
     font-size: 30px;
     text-align: center;
+    outline: 2px solid red;
+    border-radius: 20px;
+    padding: 5px;
   }
   .btn-questions{
     background-color: #98B8DC;
@@ -168,6 +175,12 @@ select {
     padding:10px 20px;
    
     
+  }
+  .button-final{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
   }
   .option-btn-selected{
     background-color: #024EA2;
@@ -178,7 +191,7 @@ select {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 100px;
+    
   }
 
  
@@ -189,6 +202,9 @@ select {
       text-align: center;
 
       }
+      #pergunta-aqui{
+        font-size: 1.2rem;;
+      }
       footer{
         display: flex;
         flex-direction: row;
@@ -197,16 +213,23 @@ select {
         padding: 10px;
       }
       .container-questions{
-        height: auto;
+        height:auto;
+        margin: 10px;
+        padding: 10px;
       }
       header{
         display: none;
        }
        .btn-questions{
         width: 90%;
-        padding: 10px 20px;
-        font-size: 1.6rem;
+       
+        font-size: 1.4rem;
         align-self: center;
+       }
+       #perguntaAtual{
+        font-size: large;
+        font-weight: bolder;
+       
        }
        footer{
         display: none;
@@ -216,5 +239,9 @@ select {
         height: auto;
         font-weight: 600;
         font-size: 1.7rem;
+        width: 50%;
+        align-self:flex-end;
+        padding:10px 10px;
+        margin-right: 22px;
        }
   }

@@ -57,7 +57,7 @@
 
         <!--section form questions -->
           <section class="container-questions">
-            <span id="perguntaAtual">Pergunta 1 de 5</span>  
+           
              <h4 id="pergunta-aqui">Você sentiu que o instrutor criou um ambiente confortável para suas aulas práticas de direção?</h4>    
              <div class="container-questions-buttons">
                 <spam>Escolha uma opção abaixo, depois clique Continuar ..</spam>
@@ -73,9 +73,12 @@
                  <button class="btn-questions" data-valor="1" onclick="responder(this)">
                     Totalmente Insatisfeito
                  </button>
-                 
+                  <div class="button-final">
+                    <span id="perguntaAtual">Pergunta 1 de 5</span>  
                     <button id="continuarButton" onclick="continuar()">Continuar</button>
                     <button id="finalizarButton" style="display:none" onclick="finalizar()">Finalizar</button>
+                  </div>
+                    
                 </div>
              
             </section>
