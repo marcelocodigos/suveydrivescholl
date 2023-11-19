@@ -150,9 +150,7 @@ select {
     margin: 30px;
   
   }
-  .btn-questions:hover{
-    outline: 2px solid #252525;
-  }
+ 
   #perguntaAtual{
     margin-top: 10px;
     font-weight: 800;
@@ -205,10 +203,13 @@ select {
         display: none;
        }
        .btn-questions{
-        width: 100%;
+        width: 90%;
         padding: 10px 20px;
-        height: 9vh;
-        font-size: 2.3rem;
+        font-size: 1.6rem;
+        align-self: center;
+       }
+       footer{
+        display: none;
        }
        #finalizarButton,
        #continuarButton{
