@@ -199,4 +199,7 @@ select {
         justify-content: center;
         padding: 10px;
       }
+      .container-questions{
+        height: 100vh;
+      }
   }
