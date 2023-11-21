@@ -1,58 +1,70 @@
-var currentQuestionIndex = 0;
-    var responses = [];
+class Pesquisa {
+  constructor() {
+      this.perguntas = [
+          "Você sentiu que o instrutor criou um ambiente confortável para suas aulas práticas de direção?",
+          // Adicione as outras perguntas aqui
+      ];
+      this.respostas = [];
+      this.perguntaAtualIndex = 0;
+  }
 
-    var questionsArray = [
-      "Você sentiu que o instrutor criou um ambiente confortável para suas aulas práticas de direção?",
-      "Como você classificaria a paciência do instrutor ao lidar com suas dúvidas e dificuldades durante as aulas?",
-      "O instrutor demonstrou conhecimento técnico sólido durante as práticas de direção?",
-      "A forma como o instrutor forneceu feedback contribuiu para o seu aprendizado nas aulas práticas?",
-      "Você percebeu alguma melhoria em suas habilidades de direção devido ao estilo de ensino do instrutor?"
-    ];
+  iniciarPesquisa() {
+      this.toggleDisplay('container', 'container-form');
+  }
 
-    function updateQuestion() {
-        document.getElementById('pergunta-aqui').textContent = questionsArray[currentQuestionIndex];
-        document.getElementById('perguntaAtual').textContent = 'Pergunta ' + (currentQuestionIndex + 1) + ' de ' + questionsArray.length;
+  continuarFormulario() {
+      this.toggleDisplay('container-form', 'container-questions');
+      this.mostrarPergunta();
+  }
+
+  continuar() {
+      // Lógica para avançar para a próxima pergunta
+      const resposta = document.querySelector('.btn-questions.selected');
+      if (resposta) {
+          this.respostas.push(resposta.dataset.valor);
+          this.perguntaAtualIndex++;
+
+          if (this.perguntaAtualIndex < this.perguntas.length) {
+              this.mostrarPergunta();
+          } else {
+              this.toggleDisplay('container-questions', 'container-agradecimento');
+          }
+      } else {
+          // Caso o usuário não tenha selecionado uma resposta
+          document.querySelector('.validation').style.display = 'block';
       }
-  
-      function responder(button) {
-        var buttons = document.getElementsByClassName('btn-questions');
-        for (var i = 0; i < buttons.length; i++) {
-          buttons[i].classList.remove('option-btn-selected');
-        }
-  
-        button.classList.add('option-btn-selected');
-  
-        responses[currentQuestionIndex] = {
-          pergunta: questionsArray[currentQuestionIndex],
-          resposta: button.textContent.trim(),
-          valor: button.getAttribute('data-valor')
-        };
+  }
+
+  mostrarPergunta() {
+      const perguntaAtual = document.getElementById('pergunta-aqui');
+      perguntaAtual.textContent = this.perguntas[this.perguntaAtualIndex];
+      document.getElementById('perguntaAtual').textContent = `Pergunta ${this.perguntaAtualIndex + 1} de 5`;
+      document.querySelectorAll('.btn-questions').forEach(btn => btn.classList.remove('selected'));
+      document.querySelector('.validation').style.display = 'none';
+  }
+
+  responder(btn) {
+      document.querySelectorAll('.btn-questions').forEach(btn => btn.classList.remove('selected'));
+      btn.classList.add('selected');
+  }
+
+  finalizar() {
+      // Lógica para finalizar a pesquisa
+      this.toggleDisplay('container-questions', 'container-agradecimento');
+  }
+
+  toggleDisplay(show, hide) {
+      const sections = ['container', 'container-form', 'container-questions', 'container-agradecimento'];
+
+      sections.forEach(section => {
+          const displayStyle = section === show ? 'block' : 'none';
+          document.querySelector(`.${section}`).style.display = displayStyle;
+      });
+
+      if (hide) {
+          document.querySelector(`.${hide}`).style.display = 'none';
       }
-  
-      function continuar() {
-        var buttons = document.getElementsByClassName('btn-questions');
-        for (var i = 0; i < buttons.length; i++) {
-          buttons[i].classList.remove('option-btn-selected');
-        }
-  
-        currentQuestionIndex++;
-  
-        if (currentQuestionIndex < questionsArray.length) {
-          updateQuestion();
-        }
-  
-        // Verificar se é a última pergunta e mostrar o botão "Finalizar"
-        if (currentQuestionIndex === questionsArray.length - 1) {
-          document.getElementById('perguntaAtual').textContent = ''; // Remover a contagem na última pergunta
-          document.getElementById('continuarButton').style.display = 'none';
-          document.getElementById('finalizarButton').style.display = 'inline';
-        }
-      }
-  
-      function finalizar() {
-        console.log('Respostas finais:', responses);
-        alert('Pesquisa finalizada! Dados enviados:\n\n' + JSON.stringify(responses));
-      }
-  
-      // Inicializa a primeira pergunta
-      updateQuestion();
+  }
+}
+
+const pesquisa = new Pesquisa();

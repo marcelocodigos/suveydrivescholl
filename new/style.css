@@ -1,0 +1,123 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Arial";
+}
+.container{
+  max-width:600px;
+  background:#ccc;
+  height:100vh;
+  margin:10px auto;
+  padding:10px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  
+  
+}
+
+.iniciar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border:1px solid gray;
+  height: 100%;
+}
+.item{
+  background:white;
+  padding:10px;
+  flex-direction:column;  
+  flex-wrap:nowrap;
+  border-radius: 20px;
+  width:70vw;
+  height: 100%;
+  max-width:500px;
+  min-width:300px;
+  align-content: center;
+  opacity:1;
+  transition: visibility 0s 1.2s;
+  
+}
+.item .keller{
+  width: 100%;
+  background-color: white;
+  border:2px solid green;
+  color:green;
+  font-weight: 700;
+  border-radius:20px;
+  transition: 300ms;
+}
+.item .keller:hover{
+  background-color: green;
+  color: white;
+  
+}
+.active{
+  background-color: green !important;
+  color: white !important;
+  outline: 4px solid greenyellow;
+}
+.item p{
+  margin:10px 0;
+}
+.item form{
+  display:flex;
+  padding:10px;
+  flex-direction:column;
+  gap:10px;
+  width:100%;
+}
+
+#perguntasContinuarBtn{
+  margin-top:60px;
+}
+select{
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  
+}
+select:focus{
+  outline:2px solid green;
+}
+.item form input{
+  padding:10px;
+  border:1px solid gray;
+  width:100%;
+
+}
+.item form input:focus{
+  outline:2px solid green;
+}
+.item button{
+  margin-top:20px;
+  border:none;
+  background:green;
+  color:white;
+  padding:10px;
+  font-size:1.2rem;
+  cursor:pointer;
+
+}
+button:hover{
+  color:#ccc;
+  opacity:0.9;
+}
+.btn-continuar{
+  display: flex;
+
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+ 
+}
+.btn-continuar button{
+ width: 50%;
+ border-radius: 40px;
+ margin-bottom: 16px;
+}
+
